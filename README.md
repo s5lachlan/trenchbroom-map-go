@@ -4,6 +4,8 @@ A renderer agnostic helper library for Go that parses and generates meshes for .
 > [!WARNING]
 > This library is experimental and primarily designed for my own personal use which involves Raylib, but it's intended to be agnostic.
 
+<img width="795" height="796" alt="A func_spinny sphere in my crap demonstration level." src="https://github.com/user-attachments/assets/b5a0713a-fa90-44c9-8370-54dce9410ed3" />
+
 ## What this library does
 
 This library can parse Valve 220 .MAP files into structs, and generate geometry.
