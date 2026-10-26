@@ -35,7 +35,7 @@ func CollectBrushVertices(planes []Plane, eps float) []Vector3 {
 // Assign corners to faces and order each face into a convex polygon.
 func BuildBrushPolygonsFromVertices(planes []Plane, verts []Vector3, eps float) []Polygon {
 	n := len(planes)
-	faceVerts := make([][]Vector3, n)
+	faceVerts := make([]Polygon, n)
 
 	for _, v := range verts {
 		for i, pl := range planes {
@@ -45,7 +45,7 @@ func BuildBrushPolygonsFromVertices(planes []Plane, verts []Vector3, eps float) 
 		}
 	}
 
-	polys := make([][]Vector3, n)
+	polys := make([]Polygon, n)
 	for i, pts := range faceVerts {
 		pts = Deduplicate(pts, DEDUP_EPS)
 		if len(pts) < 3 {
