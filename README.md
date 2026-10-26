@@ -6,11 +6,11 @@ A renderer agnostic helper library for Go that parses and generates meshes for .
 
 ## What this library does
 
-This library can parse Valve 220 .map files into structs, and generate geometry.
+This library can parse Valve 220 .MAP files into structs, and generate geometry.
 
 It does not do the following
 
-- Parse other .map types like Standard.
+- Parse other .MAP types like Standard.
 - Include an ECS for your world or have any other prebuilt management system for func entities etc.
 
 ## Usage (Raylib)
@@ -103,9 +103,11 @@ From here you now must create a model to render in your renderer from the meshes
 ## Resources
 Resources:
 - Quake Wiki: https://quakewiki.org/wiki/Quake_Map_Format
+- Stefanha's 2001 Paper: https://github.com/stefanha/map-files
 - Extra resources: https://book.leveldesignbook.com/appendix/resources/formats/map
+
 Other .MAP Parsing and Mesh Generating Implementations in other languages/engines:
-- https://github.com/stefanha/map-files
+
 - https://github.com/andyp123/blender_io_mesh_qmap
 - https://github.com/skyelynwaddell/trenchbroom-raylib-c
 - https://github.com/QodotPlugin/Qodot
