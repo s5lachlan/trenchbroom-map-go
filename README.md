@@ -4,7 +4,9 @@ A renderer agnostic helper library for Go that parses and generates meshes for .
 > [!WARNING]
 > This library is experimental and primarily designed for my own personal use which involves Raylib, but it's intended to be agnostic.
 
-<img width="795" height="796" alt="A func_spinny sphere in my crap demonstration level." src="https://github.com/user-attachments/assets/b5a0713a-fa90-44c9-8370-54dce9410ed3" />
+<img width="300" height="300" alt="A func_spinny sphere in my crap demonstration level." src="https://github.com/user-attachments/assets/b5a0713a-fa90-44c9-8370-54dce9410ed3" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/ce3093e5-1539-4a12-8e9a-8f924aa0a1c6" />
+
 
 ## What this library does
 
