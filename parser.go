@@ -83,7 +83,9 @@ func Parse(FileName string) (Map, error) {
 
 	file, err := os.Open(FileName)
 	if err != nil {
-		fmt.Println("[MAPMANAGER] Error occurred in map loading: ", err)
+		if PrintDebug {
+			fmt.Println("[TBMAPGO] Error occurred in map loading: ", err)
+		}
 		return Map{}, err
 	}
 
@@ -171,7 +173,9 @@ func Parse(FileName string) (Map, error) {
 				}
 				currentBrush.BrushFaces = append(currentBrush.BrushFaces, brushface)
 			} else {
-				fmt.Println("[MAP GENERATION] Error has occured!", err, "Count", count, "in ", brushface)
+				if PrintDebug {
+					fmt.Println("[TBMAPGO] Error has occured!", err, "Count", count, "in ", brushface)
+				}
 				return Map{}, err
 			}
 		}
@@ -181,7 +185,7 @@ func Parse(FileName string) (Map, error) {
 			count, err := fmt.Sscanf(string(currentLine), "%q %q", &EntityArg1, &EntityArg2)
 			if err == nil && count == 2 {
 				if PrintDebug {
-					fmt.Println("Entity Properties:", EntityArg1, EntityArg2)
+					fmt.Println("[TBMAPGO] Entity Properties:", EntityArg1, EntityArg2)
 				}
 				currentEntity.Data[EntityArg1] = EntityArg2
 				continue
@@ -190,7 +194,9 @@ func Parse(FileName string) (Map, error) {
 	}
 
 	if err := scanner.Err(); err != nil {
-		fmt.Println("[MAPMANAGER] Line failed to read. ", err)
+		if PrintDebug {
+			fmt.Println("[TBMAPGO] Line failed to read. ", err)
+		}
 	}
 
 	return newMap, nil
